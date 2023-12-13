@@ -16,14 +16,23 @@ int main() {
    double toki[] {0, 2.0, 4.0, 6.0, 8.0, 10.0, 15.0, 20.0, 25.0, 30.0};
    int tel = 0;
    while (tel < 10) { // Заменяем цикл for на цикл while
-        double t = toki[tel];
-        double v;
+        double t = toki[tel],v, n;
         v = u * (1 - pow(e, -( (q * t) / M) ) );
-        double n;
         n = 2 * ( 1 - (v / u) ) * (v / u);
         cout << "t=" << t << endl;
         cout << "v=" << v << endl;
         cout << "n=" << n << endl;
         tel += 1;
+        /*
+        do { 
+        double t = toki[tel],v, n;
+        v = u * (1 - pow(e, -( (q * t) / M) ) );
+        n = 2 * ( 1 - (v / u) ) * (v / u);
+        cout << "t=" << t << endl;
+        cout << "v=" << v << endl;
+        cout << "n=" << n << endl;
+        tel += 1;} while(tel < 10); Теперь он есть только не работает и работать не хочет, у него выходной :/
+        */
     }
+    
 }
